@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+    <title>Instagram Feed Bootstrap</title>
+</head>
+
+<body>
+
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ps-5 pe-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <h5 class="d-inline-block fs-5">Instagram</h5>
+            </a>
+
+            <div class="d-flex">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Create a new post
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1"
+                                        class="form-label"><strong>Caption:</strong></label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                        placeholder="Add the caption of your post here"></textarea>
+                                </div>
+
+                                <button type="button" class="btn btn-light">
+                                    <i class="fa-solid fa-camera"></i>
+                                </button>
+                                <button type="button" class="btn btn-light">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </button>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!--Body Photos-->
+    <div class="container-fluid p-2">
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                    <i class="fa-solid fa-table-cells"></i>
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!--Grid de fotos 3x3-->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/4/d/3/4d370624-ed9b-421a-91f7-bfe1f188720b_large/sunset-elephant-silhouettes-stockcake.jpg"
+                            class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/0/6/b/06bf0852-76f8-4904-8d15-ac4bda137f89_large/professor-explaining-physics-stockcake.jpg"
+                            class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/c/9/e/c9e6aa4c-2849-43ce-a459-7cd4a3610fcd_large/taekwondo-competition-action-stockcake.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/6/e/3/6e317c4a-389e-4e0e-8205-d9443bdbe177_large/birdwatching-in-forest-stockcake.jpg"
+                            class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/a/6/e/a6e050df-0362-4b9c-9c74-5311b3e56b21_large/sunset-sailing-silhouette-stockcake.jpg"
+                            class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/c/d/a/cdac0572-8bb5-463a-8e9c-57bffad7845f_large/luxury-car-interior-stockcake.jpg"
+                            class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/e/4/2/e42e97f3-87d6-4ca0-ad29-ac83be02a176_large/electronic-circuit-board-stockcake.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/f/a/e/fae3764b-924c-4f55-87e5-dc666a6986b6_large/sunrise-mountain-peak-stockcake.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                            src="https://images.stockcake.com/public/0/4/8/048fec4e-ae3b-416b-bd60-ede3109dc1ff_large/cozy-evening-setup-stockcake.jpg"
+                            class="img-fluid w-100" alt=""></div>
+                </div>
+            </div>
+
+            <!--Vista de una foto-->
+            <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Sunset Elephant Silhouettes</div>
+                            <small class="align-bottom">02/09</small>
+                        </div>
+                        <img style="object-fit: cover;"
+                            src="https://images.stockcake.com/public/4/d/3/4d370624-ed9b-421a-91f7-bfe1f188720b_large/sunset-elephant-silhouettes-stockcake.jpg"
+                            class="img-fluid w-100 col-12" alt="" />
+                        <div class="p-2">
+                            <strong>125 Likes</strong>
+                            <p>
+                                As the sun dips towards the horizon, its fiery glow casts a warm light over a serene landscape where a family of elephants roams freely. The majestic creatures, silhouetted against the vibrant sunset, move gracefully beneath an iconic acacia tree. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Professor Explaining Physics</div>
+                            <small>01/09</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images.stockcake.com/public/0/6/b/06bf0852-76f8-4904-8d15-ac4bda137f89_large/professor-explaining-physics-stockcake.jpg"
+                            class="img-fluid w-100 col-12" alt="" />
+                        <div class="p-2">
+                            <strong>148 Likes</strong>
+                            <p>
+                                In a classroom setting, a professor is seen engaging with his students by discussing detailed physics equations written on a chalkboard. Dressed in a casual shirt with sleeves rolled up and glasses perched on his nose, he explains the intricacies of the subject with a pointer in hand. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Taekwondo Competition Action</div>
+                            <small>31/08</small>
+                        </div>
+                        <img style="object-fit: cover;"
+                            src="https://images.stockcake.com/public/c/9/e/c9e6aa4c-2849-43ce-a459-7cd4a3610fcd_large/taekwondo-competition-action-stockcake.jpg"
+                            class="img-fluid w-100 col-12" alt="" />
+                        <div class="p-2">
+                            <strong>485 Likes</strong>
+                            <p>In a well-lit indoor arena, two athletes engaged in a taekwondo match exhibit a high level of skill and intensity. Wearing protective gear in red and blue, they focus intently on each other, with one athlete executing a precise high kick aimed at his opponent.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Birdwatching in Forest</div>
+                            <small class="align-bottom">30/08</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images.stockcake.com/public/6/e/3/6e317c4a-389e-4e0e-8205-d9443bdbe177_large/birdwatching-in-forest-stockcake.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>177 Likes</strong>
+                            <p>
+                                In the verdant depths of a dense forest, a group of explorers are immersed in the natural world around them. Clad in outdoor gear, they peer through binoculars and cameras, capturing the elusive beauty of wildlife. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Sunset Sailing Silhouette</div>
+                            <small>29/08</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images.stockcake.com/public/a/6/e/a6e050df-0362-4b9c-9c74-5311b3e56b21_large/sunset-sailing-silhouette-stockcake.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>451 Likes</strong>
+                            <p>
+                                As the sun dips below the horizon, the sky erupts in fiery hues of orange and red, casting a warm glow over the tranquil waters. In the midst of this breathtaking scene, a solitary sailboat glides gracefully, its sails catching the last of the daylight.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Luxury Car Interior</div>
+                            <small>28/08</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images.stockcake.com/public/c/d/a/cdac0572-8bb5-463a-8e9c-57bffad7845f_large/luxury-car-interior-stockcake.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>900 Likes</strong>
+                            <p>
+                                The image captures the striking juxtaposition of modern luxury and classic elegance, featuring a sleek, high-performance sports car parked on the reflective floor of a lavishly decorated hall.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Electronic circuit board</div>
+                            <small class="align-bottom">27/08</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images.stockcake.com/public/e/4/2/e42e97f3-87d6-4ca0-ad29-ac83be02a176_large/electronic-circuit-board-stockcake.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>194 Likes</strong>
+                            <p>
+                                The image captures a close-up view of an intricate electronic circuit board, highlighting the complexity of modern technology. Visible are various electronic components such as capacitors, resistors, and power connectors, intricately placed to form a network essential for functionality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Sunrise mountain peak</div>
+                            <small>26/08</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images.stockcake.com/public/f/a/e/fae3764b-924c-4f55-87e5-dc666a6986b6_large/sunrise-mountain-peak-stockcake.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>431 Likes</strong>
+                            <p>
+                                As the sun begins to rise, its first rays illuminate the rugged contours of a mountain peak. At the summit, a lone hiker stands, silhouetted against the brightening sky.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Cozy evening setup</div>
+                            <small>25/08</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images.stockcake.com/public/0/4/8/048fec4e-ae3b-416b-bd60-ede3109dc1ff_large/cozy-evening-setup-stockcake.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>951 Likes</strong>
+                            <p>
+                                The living room exudes a tranquil and inviting atmosphere, highlighted by a soft blue glow and a ceiling adorned with star-like lights. A large screen displays a captivating starry image, creating an almost cinematic experience. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Scripts Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
